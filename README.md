@@ -35,7 +35,7 @@ You save:
 ---
 
 #### Snippet Template 
-### Get current user
+### Title
 
 **The simple way**
 ``` rust
