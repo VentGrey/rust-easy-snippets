@@ -32,3 +32,16 @@ You save:
  - Around 10.5 ~ 22Kb
  - From 3 - 5 dependencies
  
+---
+
+#### Snippet Template 
+### Get current user
+
+**The simple way**
+``` rust
+// rust code here
+```
+
+You save:
+ - Around comp1 ~ comp2
+ - From comp1 - comp2 dependencies
