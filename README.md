@@ -99,7 +99,7 @@ You save:
  - Around 9.77 ~ 6.14 Kb
  - 0 dependencies (it would be ridiculous)
 
-### Validate if a URL is valid (with booleans)
+### Validate a URL (with booleans)
 
 **The simple way**
 ``` rust
@@ -125,6 +125,32 @@ You save:
  - Around 40 ~ 72 Kb
  - From 1 - 2 dependencies
 
+### Validate a URL (with Result<T, E>)
+
+**The simple way**
+``` rust
+fn parse_url(s: &str) -> Result<String, String> {
+    if !s.starts_with("http://") && !s.starts_with("https://") {
+        return Err("La URL no comienza con 'http://' o 'https://'".into());
+    }
+
+    if s.len() <= 7 {
+        return Err("La URL no tiene ningún caracter después del protocolo".into());
+    }
+
+    let domain = &s[7..];
+    if !domain.contains('.') || domain.len() <= domain.find('.').unwrap() + 1 {
+        return Err("Invalid URL!".into());
+    }
+
+    Ok(s.into())
+}
+```
+
+You save:
+ - Around 40 ~ 72 Kb
+ - From 1 - 2 dependencies
+ 
 ---
 
 #### Snippet Template 
