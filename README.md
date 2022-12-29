@@ -1,10 +1,20 @@
 # Easy Rust Code Snippets
 
-Do simple things in rust using simple code, no crates. No bloatware.
+Do simple things in rust using simple code.
+
+You want benefits? Here ya go:
+- No extra crates.
+- Binary size doesn't increase a lot.
+- Doesn't take even more years to compile (Rust is already at a minimum-tolerable compilation speed).
+- You don't have to deal with undocummented crates.
+- Zero stress from years-long unmaintained crates.
+- No bloatware.
 
 ## Why does this exist in the first place?
 
-I love the Rust programming language and its wide variety of applications, however I don't love how the language community is becoming an `npm` like flock of sheep importing crates randomly to make things that **SHOULD** be simple to work. This would be a "solve-able" problem if some crates were documented properly, however some crates have docs that could have been written by a monkey and be more readable, others have horrible examples using raw strings instead of actual files or very simple one line non-existant use cases that nobody has / will ever use. 
+I love the Rust programming language and its wide variety of applications, however I don't love how the language community is becoming an `npm` like flock of sheep importing crates randomly to make things that **SHOULD** be simple (I would like to say _"must"_ but I'm expecting too much). 
+
+This would be a "solve-able" problem if *all* crates were documented properly, however some crates have docs that could have been written by a monkey and be more readable, others have horrible examples using raw strings instead of actual files or very simple one line non-existant use cases that nobody has / will ever use. 
 
 This repository exists to (try) end this rant about the horrible rust practices lurking on the internet (and as a personal notepad if I ever need to use these kind of snippets for personal code).
 
