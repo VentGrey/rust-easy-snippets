@@ -86,8 +86,34 @@ fn scanvec<T: FromStr>() -> Vec<T> where <T as FromStr>::Err: std::fmt::Debug {
 ```
 
 You save:
- - Around comp1 ~ comp2
- - From comp1 - comp2 dependencies
+ - Around 9.77 ~ 6.14 Kb
+ - 0 dependencies (it would be ridiculous)
+
+### Validate if a URL is valid (with booleans)
+
+**The simple way**
+``` rust
+fn parse_url(s: &str) -> bool {
+    if !s.starts_with("http://") && !s.starts_with("https://") {
+        return false;
+    }
+
+    if s.len() <= 7 {
+        return false;
+    }
+
+    let domain = &s[7..];
+    if !domain.contains('.') || domain.len() <= domain.find('.').unwrap() + 1 {
+        return false;
+    }
+    true
+}
+
+```
+
+You save:
+ - Around 40 ~ 72 Kb
+ - From 1 - 2 dependencies
 
 ---
 
